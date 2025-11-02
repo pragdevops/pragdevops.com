@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts :: The Pragmatic DevOps engineer</title>
+    <link>https://pragdev.com/about/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Nov 2025 14:22:13 +0100</lastBuildDate>
+    <atom:link href="https://pragdev.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legal</title>
+      <link>https://pragdev.com/about/legal/index.html</link>
+      <pubDate>Sun, 02 Nov 2025 14:22:13 +0100</pubDate>
+      <guid>https://pragdev.com/about/legal/index.html</guid>
+      <description>Rechtliche Hinweise Diese Webseite ist eine rein private Internetpräsenz. Auf ihr werden keinerlei kostenpflichte Inhalte angeboten oder beworben. Daher entfällt auch die Pflicht zur Führung eines Impressums.&#xA;Diese Website nutzt Cookies nur zum Zwecke der Bedienbarkeit. Protokolldaten werden nicht erhoben und nicht gespeichert.&#xA;Bei Fragen oder Anmerkungen wenden Sie sich an info@pragdevops.com.</description>
+    </item>
+  </channel>
+</rss>
