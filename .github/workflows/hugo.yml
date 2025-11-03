@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.152.2
-      SFTP_HOST: ${{ secrets.SFTP_HOST }}
-      SFTP_USER: ${{ secrets.SFTP_USER }}
+      SFTP_HOST: ${{ vars.SFTP_HOST }}
+      SFTP_USER: ${{ vars.SFTP_USER }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-      SFTP_TARGET_DIR: ${{ secrets.SFTP_TARGET_DIR }}
+      SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -69,7 +69,7 @@ jobs:
       - name: Install sshpass
         run: sudo apt install sshpass
       - name: Upload to production site
-        run: sshpass -p "$SFTP_PASSWORD" rsync -e "ssh -o StrictHostKeyChecking=no" -avr --delete public/ "$SFTP_USER"@"$SFTP_HOST":"$SFTP_TARGET_DIR"
+        run: sshpass -p "$SFTP_PASSWORD" rsync -e "ssh -o StrictHostKeyChecking=no" -avr --delete public/ $SFTP_USER@$SFTP_HOST:$SFTP_TARGET_DIR
 
   # Deployment job
   deploy:
