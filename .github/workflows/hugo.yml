@@ -69,8 +69,7 @@ jobs:
       - name: Install sshpass
         run: sudo apt install sshpass
       - name: Upload to production site
-        run: echo "$SFTP_HOST:$SFTP_TARGET_DIR"
-        # run: sshpass -p "$SFTP_PASSWORD" rsync -avr --delete public/ "$SFTP_USER"@"$SFTP_HOST":"$SFTP_TARGET_DIR"
+        run: sshpass -p "$SFTP_PASSWORD" rsync -avr --delete public/ "$SFTP_USER"@"$SFTP_HOST":"$SFTP_TARGET_DIR"
 
   # Deployment job
   deploy:
