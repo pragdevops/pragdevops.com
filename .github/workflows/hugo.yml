@@ -67,6 +67,6 @@ jobs:
       - name: Install sshpass
         run: sudo apt install sshpass
       - name: Add target server to known_hosts
-        run: echo "$KNOWN_HOST" >> ~/.ssh/known_hosts && chmod 0600 ~/.ssh/known_hosts
+        run: mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "$KNOWN_HOST" >> ~/.ssh/known_hosts && chmod 0600 ~/.ssh/known_hosts
       - name: Deployment to production site
         run: ls -lgah public && sshpass -p "$SFTP_PASSWORD" rsync -avr --delete public/ $SFTP_USER@$SFTP_HOST:$SFTP_TARGET_DIR
