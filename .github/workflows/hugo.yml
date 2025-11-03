@@ -38,6 +38,7 @@ jobs:
       SFTP_USER: ${{ vars.SFTP_USER }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
+      BASE_URL: ${{ vars.BASE_URL }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -61,24 +62,8 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+            --baseURL $BASE_URL 
       - name: Install sshpass
         run: sudo apt install sshpass
-      - name: Upload to production site
+      - name: Deployment to production site
         run: ls -lgah public && sshpass -p "$SFTP_PASSWORD" rsync -e "ssh -o StrictHostKeyChecking=no" -avr --delete public/ $SFTP_USER@$SFTP_HOST:$SFTP_TARGET_DIR
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
