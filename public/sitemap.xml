@@ -1,33 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pragdev.com/about/about/index.html</loc>
+    <loc>https://pragdev.com/about/about/</loc>
     <lastmod>2025-11-02T15:46:46+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/about/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/about/</loc>
     <lastmod>2025-11-02T15:46:46+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/</loc>
     <lastmod>2025-11-02T15:46:46+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/about/legal/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/about/legal/</loc>
     <lastmod>2025-11-02T14:22:13+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/posts/hello-world/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/posts/hello-world/</loc>
     <lastmod>2025-11-02T14:13:40+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/posts/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/posts/</loc>
     <lastmod>2025-11-02T14:13:40+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://pragdev.com/categories/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pragdev.com/tags/index.html</loc>
+  </url><url>
+    <loc>https://pragdev.com/categories/</loc>
+  </url><url>
+    <loc>https://pragdev.com/tags/</loc>
   </url>
 </urlset>

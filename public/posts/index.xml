@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts :: The Pragmatic DevOps engineer</title>
-    <link>https://pragdev.com/posts/index.html</link>
-    <description></description>
+    <title>Posts on The Pragmatic DevOps Engineer</title>
+    <link>https://pragdev.com/posts/</link>
+    <description>Recent content in Posts on The Pragmatic DevOps Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Nov 2025 14:13:40 +0100</lastBuildDate>
     <atom:link href="https://pragdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>https://pragdev.com/posts/hello-world/index.html</link>
+      <link>https://pragdev.com/posts/hello-world/</link>
       <pubDate>Sun, 02 Nov 2025 14:13:40 +0100</pubDate>
-      <guid>https://pragdev.com/posts/hello-world/index.html</guid>
-      <description>Hello, World! In the beginning, the DevOps engineer created the version control system and the build and deploy pipeline.The infrastructure was without form and void, and darkness was over the face of the application. And the spirit of the DevOps engineer was hovering over the face of the APIs.</description>
+      <guid>https://pragdev.com/posts/hello-world/</guid>
+      <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h2&gt;&#xA;&lt;p&gt;In the beginning, the DevOps engineer created the version control system and the build and deploy pipeline.The infrastructure was without form and void, and darkness was over the face of the application. And the spirit of the DevOps engineer was hovering over the face of the APIs.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,7 +1,7 @@
 baseURL: 'https://pragdev.com/'
 languageCode: 'en-us'
 title: 'The Pragmatic DevOps Engineer'
-theme: "hugo-xmin"
+theme: "xmin"
 googleAnalytics: ""
 disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
@@ -30,7 +30,7 @@ menu:
 
 params:
   description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [BlueSky](https://bsky.app/profile/yihui.org)"
+  footer: "&copy; [The Pragmatic DevOps Engineer](https://pragdevops.com) 2025 -- {Year} | [Github](https://github.com/pragdevops) | [LinkedIn](https://www.linkedin.com/in/pragdevops/)"
 
 markup:
   highlight:
