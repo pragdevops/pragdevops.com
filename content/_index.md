@@ -7,6 +7,8 @@ title = 'Home'
 
 # The Pragmatic DevOps Engineer
 
+![The Pragmatic DevOps Engineer logo, created with Perplexity AI](pragdevops-logo.png "Logo")
+
 ## Keep calm and practice DevOps
 
 ``` python
