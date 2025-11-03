@@ -66,6 +66,8 @@ jobs:
         run: sudo apt install sshpass
       - name: Check sshpass
         run: sshpass -V
+      - name: Inspect env
+        run: pwd && ls -lgah
 
   # Deployment job
   deploy:
