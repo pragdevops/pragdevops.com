@@ -29,6 +29,8 @@ defaults:
 jobs:
   # Build job
   build:
+    environment:
+      name: pragdevops.com-production
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.152.2
