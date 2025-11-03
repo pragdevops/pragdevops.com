@@ -39,7 +39,8 @@ jobs:
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
       BASE_URL: ${{ vars.BASE_URL }}
-    steps:
+      KNOWN_HOST: $${{ secrets.KNOWN_HOST }} 
+   steps:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -65,5 +66,7 @@ jobs:
             --baseURL $BASE_URL 
       - name: Install sshpass
         run: sudo apt install sshpass
+      - name: Add target server to known_hosts
+        run: echo "$KNOWN_HOST" >> ~/.ssh/known_hosts && chmod 0600 ~/.ssh/known_hosts
       - name: Deployment to production site
-        run: ls -lgah public && sshpass -p "$SFTP_PASSWORD" rsync -e "ssh -o StrictHostKeyChecking=no" -avr --delete public/ $SFTP_USER@$SFTP_HOST:$SFTP_TARGET_DIR
+        run: ls -lgah public && sshpass -p "$SFTP_PASSWORD" rsync -avr --delete public/ $SFTP_USER@$SFTP_HOST:$SFTP_TARGET_DIR
