@@ -70,10 +70,10 @@ jobs:
         run: pwd && ls -lgah
       - name: Upload to production site
         env:
-          sftp_host ${{ SFTP_HOST }}
-          sftp_user ${{ SFTP_USER }}
-          sftp_password ${{ SFTP_PASSWORD }}
-          sftp_target_dir ${{ SFTP_TARGET_DIR }}
+          sftp_host ${{ secrets.SFTP_HOST }}
+          sftp_user ${{ secrets.SFTP_USER }}
+          sftp_password ${{ secrets.SFTP_PASSWORD }}
+          sftp_target_dir ${{ secrets.SFTP_TARGET_DIR }}
         run: sshpass -p "$sftp_password" rsync -avr --delete public/ "$sftp_user"@"$sftp_host":"$sftp_target_dir"
 
   # Deployment job
