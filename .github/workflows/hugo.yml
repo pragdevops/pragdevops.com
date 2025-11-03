@@ -32,6 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.152.2
+      SFTP_HOST: ${{ secrets.SFTP_HOST }}
+      SFTP_USER: ${{ secrets.SFTP_USER }}
+      SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+      SFTP_TARGET_DIR: ${{ secrets.SFTP_TARGET_DIR }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -69,12 +73,7 @@ jobs:
       - name: Inspect env
         run: pwd && ls -lgah
       - name: Upload to production site
-        env:
-          sftp_host: ${{ secrets.SFTP_HOST }}
-          sftp_user: ${{ secrets.SFTP_USER }}
-          sftp_password: ${{ secrets.SFTP_PASSWORD }}
-          sftp_target_dir: ${{ secrets.SFTP_TARGET_DIR }}
-        run: sshpass -p "$sftp_password" rsync -avr --delete public/ "$sftp_user"@"$sftp_host":"$sftp_target_dir"
+        run: sshpass -p "$SFTP_PASSWORD" rsync -avr --delete public/ "$SFTP_USER"@"$SFTP_HOST":"$SFTP_TARGET_DIR"
 
   # Deployment job
   deploy:
