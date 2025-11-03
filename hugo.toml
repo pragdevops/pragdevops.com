@@ -1,4 +1,4 @@
 baseURL = 'https://pragdev.com/'
 languageCode = 'en-us'
 title = 'The Pragmatic DevOps Engineer'
-theme = 'relearn'
+theme = 'xmin'
