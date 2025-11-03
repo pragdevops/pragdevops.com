@@ -60,6 +60,12 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Check rsync
+        run: rsync --version
+      - name: Install sshpass
+        run: sudo apt install sshpass
+      - name: Check sshpass
+        run: sshpass -V
 
   # Deployment job
   deploy:
