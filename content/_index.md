@@ -16,4 +16,4 @@ def index():
 
 ```
 
-That's it for now.
+That's it for now. Hacking with VT100 terminals since 1997 &trade;.
